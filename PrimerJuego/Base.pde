@@ -1,16 +1,21 @@
 class Base{
   private PVector posicion;
-  private color color1= color(0,0,255);
-  private color color2= color(0,0,0);
+  private color color1;
+  private color color2;
   
-  public Base(){
+  /*Constructor parametrizado, recibe 2 colores para armar la base*/
+  public Base(color color1,color color2){
+    this.color1=color1;
+    this.color2=color2;
   }
+  
+  /* Dibuja una base con 10 bloques, ocupando una octava parte de la parte inferior */
   public void dibujar(){
     float separacionX=width/10/5;
     float separacionY=height/8/5;
     noStroke();
     for(int i=0;i<10;i++){
-      if(i%2==0){
+      if(i%2==0){   // se usa i para alternar los colores
         fill(color1);
       }else{
         fill(color2);
@@ -32,5 +37,8 @@ class Base{
   }
   public void setPosicion(PVector posicion){
     this.posicion=posicion;
+  }
+  public PVector getPosicion(){
+    return this.posicion;
   }
 }

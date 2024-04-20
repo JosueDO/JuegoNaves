@@ -5,6 +5,8 @@ class Escenario{
   public Escenario(){
     imagen = loadImage("montania.jpg");
   }
+  /*DIBUJA FONDO TINTADO*/
+  
   public void dibujar(){
     tint(tinte);
     imageMode(CORNER);
@@ -12,7 +14,7 @@ class Escenario{
     noTint();
     noStroke();
     fill(255);
-    ellipse(random(0,width),random(0,height),3,3);
+    ellipse(random(0,width),random(0,height),3,3);//estrellas
   }
 }
   

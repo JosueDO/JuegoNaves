@@ -9,7 +9,7 @@ void setup(){
   fondo = new Escenario();
   jugador = new Shooter();
   enemy =new Enemigo();
-  suelo = new Base();
+  suelo = new Base(color(0,0,255),color(0,0,0));
   roca = new Asteoriode(new PVector(width/2,0),new PVector(0,10));
   jugador.setPosicion(new PVector(width/2,height*4/5));
   jugador.setVelocidad(new PVector(10,0));
@@ -27,9 +27,8 @@ void draw(){
   enemy.dibujar();
   enemy.mover();
   
-  //roca.mover();
 }
-
+ /* Movimientos por teclado */
 public void keyPressed(){
   if(key=='d'){
     jugador.mover(1);

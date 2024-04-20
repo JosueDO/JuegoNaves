@@ -4,7 +4,8 @@ class Asteoriode{
   private PVector velocidad;
   private float altura;
   private float ancho;
-
+  
+  /*CONSTRUCTOR*/
   
   public Asteoriode(PVector posicion,PVector velocidad){
     this.ancho=100;
@@ -21,11 +22,11 @@ class Asteoriode{
     if(this.posicion.y<=height){
       this.posicion.y+=this.velocidad.y;
     }else{
-      float x=random(1,4);
+      float x=random(1,4);//altera la velocidad y tamaño de la roca
       this.posicion.y=0;
       this.altura=100*x;
       this.ancho=100*x;
-      this.posicion.x=random(0,width);
+      this.posicion.x=random(0,width);//altera la aparicion de la roca en el eje X
       this.velocidad.y=random(8,20);
     }
   }
